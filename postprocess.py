@@ -223,12 +223,29 @@ if(itemmonth!=latestmonth):
 
     #turn it into a excel datadownload file
     with pd.ExcelWriter("datadownload.xlsx", mode="a", if_sheet_exists="replace", date_format="YYYY-MM-DD", datetime_format="YYYY-MM-DD") as writer:
-        meta.drop(columns=['AVERAGE_PRICE']).to_excel(writer, sheet_name="metadata")  
+        meta.drop(columns=['AVERAGE_PRICE']).to_excel(writer, sheet_name="Metadata")  
         # un.to_excel(writer, sheet_name="unchained")
-        chained.astype(float).round(3).to_excel(writer, sheet_name="chained")
-        avgprice.astype(float).round(2).fillna('').to_excel(writer, sheet_name="averageprice")
-        monthlygrowth.astype(float).round(0).fillna('').to_excel(writer, sheet_name="monthlygrowth")
-        annualgrowth.astype(float).round(0).fillna('').to_excel(writer,sheet_name="annualgrowth")
+        
+        # make it tidy, join on meta data, reorder columns by index
+        chained.astype(float).round(3).reset_index().melt(id_vars=['ITEM_ID'],var_name='Date',value_name='Value').dropna()\
+        .merge(meta.reset_index()[['Category1','Category2','ITEM_ID','ITEM_DESC','WEIGHT\SIZE']])\
+        .iloc[:,[1,0,3,4,5,6,2]]\
+        .to_excel(writer, index=False, sheet_name="Chained")
+        
+        avgprice.astype(float).round(2).fillna('').reset_index().melt(id_vars=['ITEM_ID'],var_name='Date',value_name='Price').dropna()\
+        .merge(meta.reset_index()[['Category1','Category2','ITEM_ID','ITEM_DESC','WEIGHT\SIZE']])\
+        .iloc[:,[1,0,3,4,5,6,2]]\
+        .to_excel(writer, index=False, sheet_name="Average price")
+        
+        monthlygrowth.astype(float).round(0).fillna('').reset_index().melt(id_vars=['ITEM_ID'],var_name='Date',value_name='Percentage').dropna() \
+        .merge(meta.reset_index()[['Category1','Category2','ITEM_ID','ITEM_DESC','WEIGHT\SIZE']])\
+        .iloc[:,[1,0,3,4,5,6,2]]\
+        .to_excel(writer, index=False, sheet_name="Monthly growth")
+        
+        annualgrowth.astype(float).round(0).fillna('').reset_index().melt(id_vars=['ITEM_ID'],var_name='Date', value_name='Percentage').dropna() \
+        .merge(meta.reset_index()[['Category1','Category2','ITEM_ID','ITEM_DESC','WEIGHT\SIZE']])\
+        .iloc[:,[1,0,3,4,5,6,2]]\
+        .to_excel(writer,index=False, sheet_name="Annualgrowth")
 
 else:
     print('Nothing to update')    
