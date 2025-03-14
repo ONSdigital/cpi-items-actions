@@ -4,13 +4,13 @@ import io
 import json
 from datetime import datetime,date
 
+#save timestamp to text file
+with open('timestamp.txt', 'w') as f:
+    f.write(datetime.now().strftime("%Y-%b-%d"))
+    
 update = False
 
 if update:
-    #save timestamp to text file
-    with open('timestamp.txt', 'w') as f:
-        f.write(datetime.now().strftime("%Y-%b-%d"))
-
     # set average price reference month
     avgpriceRefMonth=pd.Timestamp('2023-01-01 00:00:00')
 
