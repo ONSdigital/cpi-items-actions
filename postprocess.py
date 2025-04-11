@@ -8,7 +8,7 @@ from datetime import datetime,date
 with open('timestamp.txt', 'w') as f:
     f.write(datetime.now().strftime("%Y-%b-%d"))
     
-update = False
+update = True
 
 if update:
     # set average price reference month
@@ -52,7 +52,7 @@ if update:
     print('dataset='+items)
 
     #get the month and year from the uri
-    date=split(items,'itemindices',2)[1]
+    date=split(items,'consumptionsegmentindices',2)[1]
     print('the date from url:'+date)
 
     #parse it as a date
@@ -73,6 +73,7 @@ if update:
         with requests.Session() as s:
             download = s.get("https://www.ons.gov.uk/file?uri="+items+"/"+csv,headers={'User-Agent': 'Mozilla/5.0'},verify=False)
             df=pd.read_csv(io.StringIO(download.content.decode('utf-8')))
+            df.rename(columns={'CS_ID': 'ITEM_ID', 'CS_DESC': 'ITEM_DESC', 'CPI_INDEX': 'ALL_GM_INDEX', 'CPIH_WEIGHT': 'ITEM_WEIGHT'}, inplace=True)
             
         #get the index date which is the first cell
         index_date=df.iloc[0,0]
