@@ -52,7 +52,7 @@ if update:
     print('dataset='+items)
 
     #get the month and year from the uri
-    date=split(items,'consumptionsegmentindices',2)[1]
+    date=split(items,'consumptionsegmentindices',1)[1]
     print('the date from url:'+date)
 
     #parse it as a date
