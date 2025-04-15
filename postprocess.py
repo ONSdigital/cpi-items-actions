@@ -12,10 +12,10 @@ update = True
 
 if update:
     # set average price reference month
-    avgpriceRefMonth=pd.Timestamp('2023-01-01 00:00:00')
+    avgpriceRefMonth=pd.Timestamp('2025-01-01 00:00:00')
 
     # starting reference point
-    startref=pd.Timestamp('2018-01-01 00:00:00')
+    startref=pd.Timestamp('2020-01-01 00:00:00')
 
     #read in metadata
     meta = pd.read_csv('./metadata.csv',index_col=0,parse_dates=['ITEM_START'],date_format="%Y%m")
