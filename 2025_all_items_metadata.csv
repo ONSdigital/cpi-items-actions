@@ -151,8 +151,8 @@ CONSUMPTION_SEGMENT_CODE,ID_START,CONSUMPTION_SEGMENT_NAME,Category1,Category2,C
 430524,199802,Light bulb,Household items,Electrical,Miscellaneous small tool accessories,Tools and equipment for House and Garden,Tools and equipment for house and garden,"Furniture, household equipment and maintenance",single,3.331
 430541,202102,Smart Wi-Fi light bulb,Household items,Electrical,Miscellaneous small tool accessories,Tools and equipment for House and Garden,Tools and equipment for house and garden,"Furniture, household equipment and maintenance",each,18.076
 630166,202302,Soundbar,Household items,Electrical,Equipment for the reception; recording and reproduction of sound,Reception and reproduction of sound and pictures,Audio-visual equipment and related products,Recreation and culture, ,246.037
-430229,200202,Fabric roller blind,Household items,Furnishing fabrics and curtains                                                            ,Furnishing fabrics and curtains,Household Textiles,Household textiles,"Furniture, household equipment and maintenance",120-180cm,22.371
-430236,201802,Curtains (ready made),Household items,Furnishing fabrics and curtains                                                            ,Furnishing fabrics and curtains,Household Textiles,Household textiles,"Furniture, household equipment and maintenance",,44.944
+430229,200202,Fabric roller blind,Household items,Furnishing fabrics and curtains,Furnishing fabrics and curtains,Household Textiles,Household textiles,"Furniture, household equipment and maintenance",120-180cm,22.371
+430236,201802,Curtains (ready made),Household items,Furnishing fabrics and curtains,Furnishing fabrics and curtains,Household Textiles,Household textiles,"Furniture, household equipment and maintenance",,44.944
 520136,200802,Photo frame,Household items,Furniture,Other personal effects nec,Other personal effects,Personal effects (nec),Miscellaneous goods and services,,10.947
 430101,198702,Double wardrobe,Household items,Furniture,Household furniture,Furniture and furnishings,"Furniture, furnishings and carpets","Furniture, household equipment and maintenance",,621.635
 430104,198702,Armchair,Household items,Furniture,Household furniture,Furniture and furnishings,"Furniture, furnishings and carpets","Furniture, household equipment and maintenance",,630.817
@@ -283,9 +283,13 @@ CONSUMPTION_SEGMENT_CODE,ID_START,CONSUMPTION_SEGMENT_NAME,Category1,Category2,C
 620303,198702,Self drive van hire,Transport,Vehicle hire,Hire of garages; parking spaces and personal transport equipment,Other services,Operation of personal transport equipment,Transport,per day,68.506
 620307,199302,Self drive car hire,Transport,Vehicle hire,Hire of garages; parking spaces and personal transport equipment,Other services,Operation of personal transport equipment,Transport,per day,75.083
 CP0111101,202502,"Rice, in all forms (excl. rice flour)",Food and drink,Store cupboard,Rice,Bread and cereals,Food,Food and non-alcoholic beverages,per kg,1.5
+CP0111101,202502,"Rice, in all forms (excl. rice flour)",Food and drink,Store cupboard,Rice,Bread and cereals,Food,Food and non-alcoholic beverages,per pack,1.0
+CP0111101,202502,"Rice, in all forms (excl. rice flour)",Food and drink,Store cupboard,Rice,Bread and cereals,Food,Food and non-alcoholic beverages,per pack,2.5
 CP0111301,202502,"Bread, white",Food and drink,Bakery,Bread,Bread and cereals,Food,Food and non-alcoholic beverages,per kg,1.45
+CP0111301,202502,"Bread, white",Food and drink,Bakery,Bread,Bread and cereals,Food,Food and non-alcoholic beverages,per kg,1.5
 CP0111302,202502,"Bread, brown or seeded",Food and drink,Bakery,Bread,Bread and cereals,Food,Food and non-alcoholic beverages,per kg,1.65
 CP0111303,202502,"Bread rolls, buns, baguettes and other loaves",Food and drink,Bakery,Bread,Bread and cereals,Food,Food and non-alcoholic beverages,per kg,3.5
+CP0111303,202502,"Bread rolls, buns, baguettes and other loaves",Food and drink,Bakery,Bread,Bread and cereals,Food,Food and non-alcoholic beverages,per pack,1.9
 CP0111304,202502,"Flatbreads, thins and pittas",Food and drink,Bakery,Bread,Bread and cereals,Food,Food and non-alcoholic beverages,per pack of 4,1.5
 CP0230101,202502,Cigarettes,Recreation and culture,Tobacco,Cigarettes,Tobacco,Tobacco,Alcoholic beverages and tobacco,per pack of 20,15.0
 CP0230201,202502,Cigars,Recreation and culture,Tobacco,Other tobacco products,Tobacco,Tobacco,Alcoholic beverages and tobacco,per pack of 5,10.0
