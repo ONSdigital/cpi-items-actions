@@ -44,7 +44,7 @@ if update:
     #go through the dataset and find the first one which doesn't contain the word framework, glossary or /pricequotes. The url includes pricesquotes so that slash is important. Save the index as the variable match  
     for i,dataset in enumerate(datasets):
         match = i
-        if('framework' not in dataset['uri'] and 'glossary' not in dataset['uri'] and '/pricequotes' not in dataset['uri']):
+        if('microdata' not in dataset['uri'] and 'glossary' not in dataset['uri'] and '/pricequotes' not in dataset['uri']):
             break
         
     #get the uri of the items dataset we want
