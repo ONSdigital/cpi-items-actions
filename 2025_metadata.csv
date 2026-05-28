@@ -1,54 +1,54 @@
-CONSUMPTION_SEGMENT_CODE,ID_START,CONSUMPTION_SEGMENT_DESC,Category1,Category2,COICOP5,COICOP4,COICOP3,COICOP2,WEIGHT\SIZE,AVERAGE_PRICE
-220209,200302,Primary school meal (fixed charges),Food and drink establishments,Schools,Canteens,Canteens,Catering services,Restaurants and hotels,,2.37
-220210,200302,Secondary school (cafeteria),Food and drink establishments,Schools,Canteens,Canteens,Catering services,Restaurants and hotels,,2.97
-220323,200302,Takeaway kebab,Food and drink establishments,Fast food and take aways,Fast food and take away food services,"Restaurants, cafes",Catering services,Restaurants and hotels,,7.06
-220326,201202,Takeaway chicken & chips,Food and drink establishments,Fast food and take aways,Fast food and take away food services,"Restaurants, cafes",Catering services,Restaurants and hotels,,7.23
-220327,201802,Takeaway cooked pastry,Food and drink establishments,Fast food and take aways,Fast food and take away food services,"Restaurants, cafes",Catering services,Restaurants and hotels,,1.99
-410518,200501,Carpenter,Services,Maintenance and repair,Services of carpenters,Services for maintenance and repair,Regular maintenance and repair of the dwelling,"Housing, water, electricity, gas and other fuels",hourly rate,26.31
-430307,198702,Electric kettle,Household items,Electrical,Coffee machines; tea makers and similar appliances,/ Major appliances and small electric goods,"Household appliances, fitting and repairs","Furniture, household equipment and maintenance",1.5-1.7litre,30.79
-430317,199902,Electric iron,Household items,Electrical,Irons,/ Major appliances and small electric goods,"Household appliances, fitting and repairs","Furniture, household equipment and maintenance",,42.92
-430321,199902,Electric razor,Household items,Electrical,Electric appliances for personal care - Not being published,/ Appliances and products for personal care,Personal care,Miscellaneous goods and services,,
-430419,200102,Stainless steel cutlery set,Household items,Cookware,Cutlery; flatware and silverware,"Glassware, Tableware and Household Utensils","Glassware, tableware and household utensils","Furniture, household equipment and maintenance",,17.52
-430423,200501,Frying pan (non-stick),Household items,Cookware,Non-electric kitchen utensils and articles,"Glassware, Tableware and Household Utensils","Glassware, tableware and household utensils","Furniture, household equipment and maintenance",24-30cm,18.94
-430622,200302,Dog kennel fees,Recreation and culture,Pets,Veterinary and other services for pets,"/ Pets, related products and services","Other recreational items, gardens and pets",Recreation and culture,daily charge,24.12
-430623,200501,Small pet mammal,Recreation and culture,Pets,Purchase of pets,"/ Pets, related products and services","Other recreational items, gardens and pets",Recreation and culture,,
-440101,198702,Domestic cleaner,Services,Maintenance and repair,Other domestic services and household services,Domestic services and household services,Goods and services for routine maintenance,"Furniture, household equipment and maintenance",hourly rate,17.88
-510132,201302,Men's short sleeved t-shirt,Clothing and footwear,Men's clothing,Garments for men,Garments,Clothing,Clothing and footwear,,17.64
-510133,202202,Men's loungewear bottoms,Clothing and footwear,Men's clothing,Garments for men,Garments,Clothing,Clothing and footwear,,27.8
-510134,202302,Men's formal jacket/blazer,Clothing and footwear,Men's clothing,Garments for men,Garments,Clothing,Clothing and footwear,,143.82
-510402,198702,Men's pants/boxers,Clothing and footwear,Men's clothing,Garments for men,Garments,Clothing,Clothing and footwear,,
-510415,198702,Women's tights,Clothing and footwear,Women's clothing,Garments for women,Garments,Clothing,Clothing and footwear,,
-510435,202302,Sports bra/crop top,Clothing and footwear,Women's clothing,Garments for women,Garments,Clothing,Clothing and footwear,,28.43
-510533,201102,Women's high heeled shoes,Clothing and footwear,Women's footwear,Footwear for women,Footwear including repairs,Footwear including repairs,Clothing and footwear,,
-510537,202602,Women's canvas shoes,Clothing and footwear,Women's footwear,Footwear for women,Footwear including repairs,Footwear including repairs,Clothing and footwear,,17.71
-520209,198702,Toothpaste,Health,Personal hygiene and wellness,Articles for personal hygiene and wellness,/ Appliances and products for personal care,Personal care,Miscellaneous goods and services,,
-520213,198702,Tissues,Health,Personal hygiene and wellness,Articles for personal hygiene and wellness,/ Appliances and products for personal care,Personal care,Miscellaneous goods and services,large box,1.63
-520215,198702,Facial moisturiser,Health,Personal hygiene and wellness,Articles for personal hygiene and wellness,/ Appliances and products for personal care,Personal care,Miscellaneous goods and services,50-150ml,
-520216,198702,Deodorant/anti perspirant,Health,Personal hygiene and wellness,Articles for personal hygiene and wellness,/ Appliances and products for personal care,Personal care,Miscellaneous goods and services,50-250ml,2.55
-520223,199302,Mascara,Health,Personal hygiene and wellness,Articles for personal hygiene and wellness,/ Appliances and products for personal care,Personal care,Miscellaneous goods and services,,10.04
-520301,198702,Men's haircut,Services,Hairdressing,Hairdressing for men and children,Hairdressing and personal grooming establishments,Personal care,Miscellaneous goods and services,,15.79
-520303,198702,Women's hairdressing (cut & blow dry),Services,Hairdressing,Hairdressing for women,Hairdressing and personal grooming establishments,Personal care,Miscellaneous goods and services,,46.04
-610115,202402,Adult electric bike,Transport,Bikes and cycling equipment,Motor cycles,/ Motorcycles and bicycles,Purchase of vehicles,Transport, ,1640.44
-610204,198702,Car tyre,Transport,Spare parts,Tyres,Spare parts and accessories,Operation of personal transport equipment,Transport,,81.76
-610207,198702,Car spare parts,Transport,Spare parts,Spare parts for personal transport equipment,Spare parts and accessories,Operation of personal transport equipment,Transport,,
-610309,200702,Ultra low sulphur diesel,Transport,Petrol and diesel,Diesel,Fuels and lubricants,Operation of personal transport equipment,Transport,,1.36
-610310,200702,Ultra low sulphur petrol,Transport,Petrol and diesel,Petrol,Fuels and lubricants,Operation of personal transport equipment,Transport,,1.38
-630168,202502,VR headset,Recreation and culture,Audio and visual equipment,Accessories for information processing equipment,Data processing equipment,Audio-visual equipment and related products,Recreation and culture,single,637.14
-630377,201802,Action camera,Recreation and culture,Audio and visual equipment,"Photographic, cinematographic and optical equipment","Photographic, cinematographic and optical equipment",Audio-visual equipment and related products,Recreation and culture,,
-640211,198702,Historic monument admission,Recreation and culture,Activity,Museums; libraries; zoological gardens,Cultural services,Recreational and cultural services,Recreation and culture,,
-640212,198702,Theatre ticket,Recreation and culture,Activity,Cinemas; theatres; concerts,Cultural services,Recreational and cultural services,Recreation and culture,one adult,30.84
-CP0111101,202602,"Rice, in all forms (excl. rice flour)",Food and drink,Store cupboard,Food and non-alcoholic beverages,Food,Bread and cereals,Rice,750 g,2.5
-CP0111301,202602,"Bread, white",Food and drink,Bakery,Food and non-alcoholic beverages,Food,Bread and cereals,Bread,800 g,1.4
-CP0112301,202602,Cooked ham and continental meats (e.g. salami),Food and drink,Meat,Food and non-alcoholic beverages,Food,Meat,Dried; salted or smoked meat,150 g,2.0
-CP0113301,202602,"Breaded and battered fish, chilled or frozen",Food and drink,Fish,Food and non-alcoholic beverages,Food,Fish,Other pres or processed fish & seafood-based preps,10 pack,3.5
-CP0113302,202602,Canned fish,Food and drink,Fish,Food and non-alcoholic beverages,Food,Fish,Other pres or processed fish & seafood-based preps,each,1.5
-CP0115101,202602,Olive oil,Food and drink,"Butter, spreads and oils",Food and non-alcoholic beverages,Food,Oils and fats,Olive oil,200 ml,3.0
-CP0116501,202602,"Other fruits n.e.c., fresh",Food and drink,Fresh fruit,Food and non-alcoholic beverages,Food,Fruit,Fresh or chilled fruit,1000 g,3.0
-CP0117101,202602,"Cauliflowers, broccoli and other brassicas, fresh or chilled",Food and drink,Fresh vegetables,Food and non-alcoholic beverages,Food,Vegetables including potatoes and tubers,Fresh/chill veg other than potatoes & other tubers,1000 g,3.0
-CP0117901,202602,"Vegetables, tubers and pulses, canned or jarred (excl. pickled vegetables)",Food and drink,Store cupboard,Food and non-alcoholic beverages,Food,Vegetables including potatoes and tubers,Dried vegetables; other preserved or processed vegetables,412 g,0.5
-CP0117906,202602,Vegetarian and vegan meat substitutes,Food and drink,Other food,Food and non-alcoholic beverages,Food,Vegetables including potatoes and tubers,Dried vegetables; other preserved or processed vegetables,360 g,2.5
-CP0118901,202602,"Sweets, mints and chewing gum",Food and drink,Chocolate and sweets,Food and non-alcoholic beverages,Food,"Sugar, jam, syrups, chocolate and confectionery",Confectionery products,each,0.1
-CP0118902,202602,"Sweets, soft and hard (excl. mints and chewing gum)",Food and drink,Chocolate and sweets,Food and non-alcoholic beverages,Food,"Sugar, jam, syrups, chocolate and confectionery",Confectionery products,195 g,1.5
-CP0119202,202602,Baby formula,Food and drink,Other food,Food and non-alcoholic beverages,Food,"Milk, cheese and eggs",Other milk products,800 g,12.0
-CP0122001,202602,Coffee,Food and drink,Soft drinks                                                                                ,Food and non-alcoholic beverages,Non-alcoholic beverages,"Coffee, tea and cocoa",Coffee,95 g,3.5
-CP0211001,202602,"Spirits, gin",Food and drink,Alcohol,Alcoholic beverages and tobacco,Alcoholic beverages,Spirits,Spirits,700 ml,20.0
+"CONSUMPTION_SEGMENT_CODE","ID_START","CONSUMPTION_SEGMENT_DESC","Category1","Category2","COICOP5","COICOP4","COICOP3","COICOP2","WEIGHT\SIZE","AVERAGE_PRICE"
+"220209",200302,"Primary school meal (fixed charges)","Food and drink establishments","Schools","Canteens","Canteens","Catering services","Restaurants and hotels","",2.37
+"220210",200302,"Secondary school (cafeteria)","Food and drink establishments","Schools","Canteens","Canteens","Catering services","Restaurants and hotels","",2.97
+"220323",200302,"Takeaway kebab","Food and drink establishments","Fast food and take aways","Fast food and take away food services","Restaurants, cafes","Catering services","Restaurants and hotels","",7.06
+"220326",201202,"Takeaway chicken & chips","Food and drink establishments","Fast food and take aways","Fast food and take away food services","Restaurants, cafes","Catering services","Restaurants and hotels","",7.23
+"220327",201802,"Takeaway cooked pastry","Food and drink establishments","Fast food and take aways","Fast food and take away food services","Restaurants, cafes","Catering services","Restaurants and hotels","",1.99
+"410518",200501,"Carpenter","Services","Maintenance and repair","Services of carpenters","Services for maintenance and repair","Regular maintenance and repair of the dwelling","Housing, water, electricity, gas and other fuels","hourly rate",26.31
+"430307",198702,"Electric kettle","Household items","Electrical","Coffee machines; tea makers and similar appliances","/ Major appliances and small electric goods","Household appliances, fitting and repairs","Furniture, household equipment and maintenance","1.5-1.7litre",30.79
+"430317",199902,"Electric iron","Household items","Electrical","Irons","/ Major appliances and small electric goods","Household appliances, fitting and repairs","Furniture, household equipment and maintenance","",42.92
+"430321",199902,"Electric razor","Household items","Electrical","Electric appliances for personal care - Not being published","/ Appliances and products for personal care","Personal care","Miscellaneous goods and services","",NA
+"430419",200102,"Stainless steel cutlery set","Household items","Cookware","Cutlery; flatware and silverware","Glassware, Tableware and Household Utensils","Glassware, tableware and household utensils","Furniture, household equipment and maintenance","",17.52
+"430423",200501,"Frying pan (non-stick)","Household items","Cookware","Non-electric kitchen utensils and articles","Glassware, Tableware and Household Utensils","Glassware, tableware and household utensils","Furniture, household equipment and maintenance","24-30cm",18.94
+"430622",200302,"Dog kennel fees","Recreation and culture","Pets","Veterinary and other services for pets","/ Pets, related products and services","Other recreational items, gardens and pets","Recreation and culture","daily charge",24.12
+"430623",200501,"Small pet mammal","Recreation and culture","Pets","Purchase of pets","/ Pets, related products and services","Other recreational items, gardens and pets","Recreation and culture","",NA
+"440101",198702,"Domestic cleaner","Services","Maintenance and repair","Other domestic services and household services","Domestic services and household services","Goods and services for routine maintenance","Furniture, household equipment and maintenance","hourly rate",17.88
+"510132",201302,"Men's short sleeved t-shirt","Clothing and footwear","Men's clothing","Garments for men","Garments","Clothing","Clothing and footwear","",17.64
+"510133",202202,"Men's loungewear bottoms","Clothing and footwear","Men's clothing","Garments for men","Garments","Clothing","Clothing and footwear","",27.8
+"510134",202302,"Men's formal jacket/blazer","Clothing and footwear","Men's clothing","Garments for men","Garments","Clothing","Clothing and footwear","",143.82
+"510402",198702,"Men's pants/boxers","Clothing and footwear","Men's clothing","Garments for men","Garments","Clothing","Clothing and footwear","",NA
+"510415",198702,"Women's tights","Clothing and footwear","Women's clothing","Garments for women","Garments","Clothing","Clothing and footwear","",NA
+"510435",202302,"Sports bra/crop top","Clothing and footwear","Women's clothing","Garments for women","Garments","Clothing","Clothing and footwear","",28.43
+"510533",201102,"Women's high heeled shoes","Clothing and footwear","Women's footwear","Footwear for women","Footwear including repairs","Footwear including repairs","Clothing and footwear","",NA
+"510537",202602,"Women's canvas shoes","Clothing and footwear","Women's footwear","Footwear for women","Footwear including repairs","Footwear including repairs","Clothing and footwear","",17.71
+"520209",198702,"Toothpaste","Health","Personal hygiene and wellness","Articles for personal hygiene and wellness","/ Appliances and products for personal care","Personal care","Miscellaneous goods and services","",NA
+"520213",198702,"Tissues","Health","Personal hygiene and wellness","Articles for personal hygiene and wellness","/ Appliances and products for personal care","Personal care","Miscellaneous goods and services","large box",1.63
+"520215",198702,"Facial moisturiser","Health","Personal hygiene and wellness","Articles for personal hygiene and wellness","/ Appliances and products for personal care","Personal care","Miscellaneous goods and services","50-150ml",NA
+"520216",198702,"Deodorant/anti perspirant","Health","Personal hygiene and wellness","Articles for personal hygiene and wellness","/ Appliances and products for personal care","Personal care","Miscellaneous goods and services","50-250ml",2.55
+"520223",199302,"Mascara","Health","Personal hygiene and wellness","Articles for personal hygiene and wellness","/ Appliances and products for personal care","Personal care","Miscellaneous goods and services","",10.04
+"520301",198702,"Men's haircut","Services","Hairdressing","Hairdressing for men and children","Hairdressing and personal grooming establishments","Personal care","Miscellaneous goods and services","",15.79
+"520303",198702,"Women's hairdressing (cut & blow dry)","Services","Hairdressing","Hairdressing for women","Hairdressing and personal grooming establishments","Personal care","Miscellaneous goods and services","",46.04
+"610115",202402,"Adult electric bike","Transport","Bikes and cycling equipment","Motor cycles","/ Motorcycles and bicycles","Purchase of vehicles","Transport"," ",1640.44
+"610204",198702,"Car tyre","Transport","Spare parts","Tyres","Spare parts and accessories","Operation of personal transport equipment","Transport","",81.76
+"610207",198702,"Car spare parts","Transport","Spare parts","Spare parts for personal transport equipment","Spare parts and accessories","Operation of personal transport equipment","Transport","",NA
+"610309",200702,"Ultra low sulphur diesel","Transport","Petrol and diesel","Diesel","Fuels and lubricants","Operation of personal transport equipment","Transport","",1.36
+"610310",200702,"Ultra low sulphur petrol","Transport","Petrol and diesel","Petrol","Fuels and lubricants","Operation of personal transport equipment","Transport","",1.38
+"630168",202502,"VR headset","Recreation and culture","Audio and visual equipment","Accessories for information processing equipment","Data processing equipment","Audio-visual equipment and related products","Recreation and culture","single",637.14
+"630377",201802,"Action camera","Recreation and culture","Audio and visual equipment","Photographic, cinematographic and optical equipment","Photographic, cinematographic and optical equipment","Audio-visual equipment and related products","Recreation and culture","",NA
+"640211",198702,"Historic monument admission","Recreation and culture","Activity","Museums; libraries; zoological gardens","Cultural services","Recreational and cultural services","Recreation and culture","",NA
+"640212",198702,"Theatre ticket","Recreation and culture","Activity","Cinemas; theatres; concerts","Cultural services","Recreational and cultural services","Recreation and culture","one adult",30.84
+"CP0111101",202602,"Rice, in all forms (excl. rice flour)","Food and drink","Store cupboard","Food and non-alcoholic beverages","Food","Bread and cereals","Rice","750 g",2.5
+"CP0111301",202602,"Bread, white","Food and drink","Bakery","Food and non-alcoholic beverages","Food","Bread and cereals","Bread","800 g",1.4
+"CP0112301",202602,"Cooked ham and continental meats (e.g. salami)","Food and drink","Meat","Food and non-alcoholic beverages","Food","Meat","Dried; salted or smoked meat","150 g",2
+"CP0113301",202602,"Breaded and battered fish, chilled or frozen","Food and drink","Fish","Food and non-alcoholic beverages","Food","Fish","Other pres or processed fish & seafood-based preps","10 pack",3.5
+"CP0113302",202602,"Canned fish","Food and drink","Fish","Food and non-alcoholic beverages","Food","Fish","Other pres or processed fish & seafood-based preps","each",1.5
+"CP0115101",202602,"Olive oil","Food and drink","Butter, spreads and oils","Food and non-alcoholic beverages","Food","Oils and fats","Olive oil","200 ml",3
+"CP0116501",202602,"Other fruits n.e.c., fresh","Food and drink","Fresh fruit","Food and non-alcoholic beverages","Food","Fruit","Fresh or chilled fruit","1000 g",3
+"CP0117101",202602,"Cauliflowers, broccoli and other brassicas, fresh or chilled","Food and drink","Fresh vegetables","Food and non-alcoholic beverages","Food","Vegetables including potatoes and tubers","Fresh/chill veg other than potatoes & other tubers","1000 g",3
+"CP0117901",202602,"Vegetables, tubers and pulses, canned or jarred (excl. pickled vegetables)","Food and drink","Store cupboard","Food and non-alcoholic beverages","Food","Vegetables including potatoes and tubers","Dried vegetables; other preserved or processed vegetables","412 g",0.5
+"CP0117906",202602,"Vegetarian and vegan meat substitutes","Food and drink","Other food","Food and non-alcoholic beverages","Food","Vegetables including potatoes and tubers","Dried vegetables; other preserved or processed vegetables","360 g",2.5
+"CP0118901",202602,"Sweets, mints and chewing gum","Food and drink","Chocolate and sweets","Food and non-alcoholic beverages","Food","Sugar, jam, syrups, chocolate and confectionery","Confectionery products","each",0.1
+"CP0118902",202602,"Sweets, soft and hard (excl. mints and chewing gum)","Food and drink","Chocolate and sweets","Food and non-alcoholic beverages","Food","Sugar, jam, syrups, chocolate and confectionery","Confectionery products","195 g",1.5
+"CP0119202",202602,"Baby formula","Food and drink","Other food","Food and non-alcoholic beverages","Food","Milk, cheese and eggs","Other milk products","800 g",12
+"CP0122001",202602,"Coffee","Food and drink","Soft drinks                                                                                ","Food and non-alcoholic beverages","Non-alcoholic beverages","Coffee, tea and cocoa","Coffee","95 g",3.5
+"CP0211001",202602,"Spirits, gin","Food and drink","Alcohol","Alcoholic beverages and tobacco","Alcoholic beverages","Spirits","Spirits","700 ml",20
