@@ -2,7 +2,7 @@ name: Python
 
 on:
   schedule:
-  - cron: "01 07 14-27 * *" 
+  - cron: "01 06 14-27 * *" 
   workflow_dispatch:
 
 jobs:
