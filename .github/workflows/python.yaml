@@ -3,6 +3,7 @@ name: Python
 on:
   schedule:
   - cron: "01 07 14-27 * *" 
+    timezone: "Europe/London"
   workflow_dispatch:
 
 jobs:
