@@ -265,7 +265,8 @@ for (idx in seq(13, length(col_names))) {
     if (is.na(prev) || is.na(curr) || prev == 0) {
       return(NA)
     }
-    as.integer(round((curr - prev) * 100 / prev))
+    round((curr - prev) * 100 / prev, 1)
+    # as.integer(round((curr - prev) * 100 / prev))
   })
 }
 
