@@ -34,8 +34,7 @@ melt_wide <- function(df, id_cols) {
 writeLines(format(Sys.time(), "%Y-%b-%d"), "timestamp.txt")
 
 # Create metadata and unchained files from starting file ----
-df_meta <- read.csv("2026_starting_file_test_data_v2.csv",
-  skip = 2,
+df_meta <- read.csv("starting_file.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
 
@@ -56,11 +55,10 @@ df_meta_deduped <- df_meta_deduped[!duplicated(df_meta_deduped$CONSUMPTION_SEGME
 write.csv(df_meta_deduped, "2025_metadata.csv", row.names = FALSE)
 
 # Create unchained file: keep CONSUMPTION_SEGMENT_CODE + date columns >= 202101
-df_start <- read.csv("2026_starting_file_test_data_v2.csv",
-  skip = 2,
+df_start <- read.csv("starting_file.csv",
   stringsAsFactors = FALSE, check.names = FALSE
 )
-date_cols <- names(df_start)[grepl("^20[0-9]{4}$", names(df_start)) & names(df_start) >= "202101"]
+date_cols <- names(df_start)[grepl("^20[0-9]{4}$", names(df_start)) & names(df_start) >= "202101"] ## var
 unchained2025 <- df_start[, c("CONSUMPTION_SEGMENT_CODE", date_cols), drop = FALSE]
 unchained2025 <- unchained2025[!duplicated(unchained2025$CONSUMPTION_SEGMENT_CODE), ]
 unchained2025[] <- lapply(unchained2025, function(col) gsub("-", "", as.character(col)))
@@ -70,7 +68,7 @@ cat("Created: 2026_all_items_metadata.csv, 2025_metadata.csv, 2025_unchained.csv
 
 # Reference months ----
 avgprice_ref_month <- as.Date("2026-01-01")
-startref <- as.Date("2022-01-01")
+startref <- as.Date("2021-01-01")
 
 # Read metadata ----
 meta <- read.csv("2025_metadata.csv", stringsAsFactors = FALSE)
@@ -87,7 +85,7 @@ latest_month <- parse_ym(max(date_col_names))
 cat("Latest month in unchained:", format(latest_month), "\n")
 
 # Merge test data (manual/local workflow) ----
-df_test <- read.csv("march_2026_example_test_data_v1.csv",
+df_test <- read.csv("march_2026_example_test_data_v1.csv",  ### thing from BA
   stringsAsFactors = FALSE,
   check.names = FALSE
 )
@@ -192,6 +190,7 @@ allitems$CONSUMPTION_SEGMENT_CODE <- as.character(allitems$CONSUMPTION_SEGMENT_C
 # base_col <- names(chained)[1]
 base_col <- as.character(avgprice_ref_month)
 avgprice_merged <- allitems[, c("ID_NAME", "CONSUMPTION_SEGMENT_CODE")]
+allitems$AVERAGE_PRICE <- as.numeric(allitems$AVERAGE_PRICE)
 
 for (col_name in names(chained)) {
   avgprice_merged[[col_name]] <- sapply(avgprice_merged$CONSUMPTION_SEGMENT_CODE, function(seg) {
@@ -206,8 +205,9 @@ for (col_name in names(chained)) {
     curr_val <- chained[seg, col_name]
     if (is.na(base_val) || is.na(curr_val) || base_val == 0) {
       return(NA)
+    } else {
+      return(round(curr_val / base_val * avg_price_row[1], 2))
     }
-    round(curr_val / base_val * avg_price_row[1], 2)
   })
 }
 
@@ -367,3 +367,4 @@ saveWorkbook(wb, "datadownload.xlsx", overwrite = TRUE)
 
 cat("Saved: datadownload.xlsx\n")
 cat("R process complete.\n")
+
