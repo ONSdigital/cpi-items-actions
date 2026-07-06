@@ -211,6 +211,10 @@ for (col_name in names(chained)) {
   })
 }
 
+# filter out rows where all values are NA
+avgprice_merged <- avgprice_merged |> 
+  filter(!if_all(-c(ID_NAME, CONSUMPTION_SEGMENT_CODE), is.na))
+
 write.csv(avgprice_merged, "avgprice_merged.csv", row.names = FALSE, na = "")
 cat("Saved: avgprice_merged.csv\n")
 
