@@ -211,10 +211,6 @@ for (col_name in names(chained)) {
   })
 }
 
-# filter out rows where all values are NA
-avgprice_merged <- avgprice_merged |> 
-  filter(!if_all(-c(ID_NAME, CONSUMPTION_SEGMENT_CODE), is.na))
-
 write.csv(avgprice_merged, "avgprice_merged.csv", row.names = FALSE, na = "")
 cat("Saved: avgprice_merged.csv\n")
 
@@ -240,7 +236,7 @@ for (idx in seq(2, length(col_names))) {
     if (is.na(prev) || is.na(curr) || prev == 0) {
       return(NA)
     }
-    as.integer(round((curr - prev) * 100 / prev))
+    round((curr - prev) * 100 / prev, 3)
   })
 }
 
@@ -269,7 +265,7 @@ for (idx in seq(13, length(col_names))) {
     if (is.na(prev) || is.na(curr) || prev == 0) {
       return(NA)
     }
-    round((curr - prev) * 100 / prev, 1)
+    round((curr - prev) * 100 / prev, 3)
     # as.integer(round((curr - prev) * 100 / prev))
   })
 }
@@ -290,6 +286,8 @@ meta_for_datadownload$CONSUMPTION_SEGMENT_CODE <- as.character(
 meta_sheet <- meta_for_datadownload[, names(meta_for_datadownload) != "AVERAGE_PRICE",
   drop = FALSE
 ]
+names(meta_sheet)[names(meta_sheet) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+
 
 chained_long <- melt_wide(
   cbind(CONSUMPTION_SEGMENT_CODE = rownames(chained), round(chained, 3)),
@@ -308,11 +306,15 @@ chained_long <- chained_long[, c(
   "ID_NAME", "Category1", "CONSUMPTION_SEGMENT_CODE",
   "Category2", "WEIGHT\\SIZE", "Date", "Value"
 )]
+names(chained_long)[names(chained_long) == "Date"] <- "INDEX_DATE"
+names(chained_long)[names(chained_long) == "Value"] <- "INDEX_VALUE"
+names(chained_long)[names(chained_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+
 
 avgprice_long <- melt_wide(avgprice_merged, id_cols = c("ID_NAME", "CONSUMPTION_SEGMENT_CODE"))
 avgprice_long$Value <- as.numeric(avgprice_long$Value)
 avgprice_long <- avgprice_long[!is.na(avgprice_long$Value), ]
-names(avgprice_long)[names(avgprice_long) == "Value"] <- "Price"
+names(avgprice_long)[names(avgprice_long) == "Value"] <- "AVERAGE_PRICE"
 avgprice_long <- merge(
   avgprice_long,
   meta_for_datadownload[, c(
@@ -322,8 +324,12 @@ avgprice_long <- merge(
 )
 avgprice_long <- avgprice_long[, c(
   "CONSUMPTION_SEGMENT_CODE", "ID_NAME",
-  "Category1", "Category2", "WEIGHT\\SIZE", "Date", "Price"
+  "Category1", "Category2", "WEIGHT\\SIZE", "Date", "AVERAGE_PRICE"
 )]
+
+names(avgprice_long)[names(avgprice_long) == "Date"] <- "INDEX_DATE"
+names(avgprice_long)[names(avgprice_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+
 
 monthly_long <- melt_wide(monthly_growth, id_cols = c("ID_NAME", "CONSUMPTION_SEGMENT_CODE"))
 monthly_long$Value <- as.numeric(monthly_long$Value)
@@ -341,6 +347,11 @@ monthly_long <- monthly_long[, c(
   "Category1", "Category2", "WEIGHT\\SIZE", "Date", "Percentage"
 )]
 
+names(monthly_long)[names(monthly_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+names(monthly_long)[names(monthly_long) == "Percentage"] <- "PERCENTAGE_GROWTH"
+names(monthly_long)[names(monthly_long) == "Date"] <- "INDEX_DATE"
+
+
 annual_long <- melt_wide(annual_growth, id_cols = c("ID_NAME", "CONSUMPTION_SEGMENT_CODE"))
 annual_long$Value <- as.numeric(annual_long$Value)
 annual_long <- annual_long[!is.na(annual_long$Value), ]
@@ -356,19 +367,54 @@ annual_long <- annual_long[, c(
   "CONSUMPTION_SEGMENT_CODE", "ID_NAME",
   "Category1", "Category2", "WEIGHT\\SIZE", "Date", "Percentage"
 )]
+names(annual_long)[names(annual_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+names(annual_long)[names(annual_long) == "Percentage"] <- "PERCENTAGE_GROWTH"
+names(annual_long)[names(annual_long) == "Date"] <- "INDEX_DATE"
+
 
 wb <- loadWorkbook("datadownload.xlsx")
-for (sheet_name in c("Metadata", "Chained", "Average price", "Monthly growth", "Annual growth")) {
+for (sheet_name in c("Metadata", "Average price", "Chained index", "Monthly growth", "Annual growth")) {
   if (sheet_name %in% names(wb)) removeWorksheet(wb, sheet_name)
   addWorksheet(wb, sheet_name)
 }
 writeData(wb, "Metadata", meta_sheet)
-writeData(wb, "Chained", chained_long)
 writeData(wb, "Average price", avgprice_long)
+writeData(wb, "Chained index", chained_long)
 writeData(wb, "Monthly growth", monthly_long)
 writeData(wb, "Annual growth", annual_long)
+
+# Format as 2 dp
+addStyle(
+  wb,
+  "Average price",
+  style = createStyle(numFmt = "0.00"),
+  rows = 2:(nrow(avgprice_long) + 1),
+  cols = c(7), 
+  gridExpand = TRUE
+)
+
+
 saveWorkbook(wb, "datadownload.xlsx", overwrite = TRUE)
+
+# Format 
 
 cat("Saved: datadownload.xlsx\n")
 cat("R process complete.\n")
+
+
+
+# filter out unavailable items from avg prices merged and resave
+# filter out rows where all values are NA
+avgprice_merged <- avgprice_merged[
+  rowSums(
+    !is.na(
+      avgprice_merged[
+        , !names(avgprice_merged) %in% c("ID_NAME", "CONSUMPTION_SEGMENT_CODE")
+      ]
+    )
+  ) > 0,
+]
+
+write.csv(avgprice_merged, "avgprice_merged.csv", row.names = FALSE, na = "")
+cat("Saved: avgprice_merged.csv\n")
 
