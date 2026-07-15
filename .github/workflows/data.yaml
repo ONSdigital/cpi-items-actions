@@ -23,7 +23,7 @@ jobs:
         shell: Rscript {0}
 
       - name: Import data
-        run: Rscript -e 'source("postprocess.R")' # Run R script
+        run: Rscript -e 'source("R/postprocess.R")' # Run R script
 
       - name: Commit and push results
         run: |

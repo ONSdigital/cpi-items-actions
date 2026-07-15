@@ -309,11 +309,12 @@ chained_long <- chained_long[, c(
 names(chained_long)[names(chained_long) == "Date"] <- "INDEX_DATE"
 names(chained_long)[names(chained_long) == "Value"] <- "INDEX_VALUE"
 names(chained_long)[names(chained_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+chained_long <- chained_long[order(chained_long$CONSUMPTION_SEGMENT_CODE, -xtfrm(chained_long$INDEX_DATE)), ]
 
 
 avgprice_long <- melt_wide(avgprice_merged, id_cols = c("ID_NAME", "CONSUMPTION_SEGMENT_CODE"))
 avgprice_long$Value <- as.numeric(avgprice_long$Value)
-avgprice_long <- avgprice_long[!is.na(avgprice_long$Value), ]
+# avgprice_long <- avgprice_long[!is.na(avgprice_long$Value), ] - keep unavailable
 names(avgprice_long)[names(avgprice_long) == "Value"] <- "AVERAGE_PRICE"
 avgprice_long <- merge(
   avgprice_long,
@@ -329,6 +330,7 @@ avgprice_long <- avgprice_long[, c(
 
 names(avgprice_long)[names(avgprice_long) == "Date"] <- "INDEX_DATE"
 names(avgprice_long)[names(avgprice_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
+avgprice_long <- avgprice_long[order(avgprice_long$CONSUMPTION_SEGMENT_CODE, -xtfrm(avgprice_long$INDEX_DATE)), ]
 
 
 monthly_long <- melt_wide(monthly_growth, id_cols = c("ID_NAME", "CONSUMPTION_SEGMENT_CODE"))
@@ -350,6 +352,7 @@ monthly_long <- monthly_long[, c(
 names(monthly_long)[names(monthly_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
 names(monthly_long)[names(monthly_long) == "Percentage"] <- "PERCENTAGE_GROWTH"
 names(monthly_long)[names(monthly_long) == "Date"] <- "INDEX_DATE"
+monthly_long <- monthly_long[order(monthly_long$CONSUMPTION_SEGMENT_CODE, -xtfrm(monthly_long$INDEX_DATE)), ]
 
 
 annual_long <- melt_wide(annual_growth, id_cols = c("ID_NAME", "CONSUMPTION_SEGMENT_CODE"))
@@ -370,7 +373,7 @@ annual_long <- annual_long[, c(
 names(annual_long)[names(annual_long) == "WEIGHT\\SIZE"] <- "WEIGHT_SIZE"
 names(annual_long)[names(annual_long) == "Percentage"] <- "PERCENTAGE_GROWTH"
 names(annual_long)[names(annual_long) == "Date"] <- "INDEX_DATE"
-
+annual_long <- annual_long[order(annual_long$CONSUMPTION_SEGMENT_CODE, -xtfrm(annual_long$INDEX_DATE)), ]
 
 wb <- loadWorkbook("datadownload.xlsx")
 for (sheet_name in c("Metadata", "Average price", "Chained index", "Monthly growth", "Annual growth")) {
@@ -378,7 +381,7 @@ for (sheet_name in c("Metadata", "Average price", "Chained index", "Monthly grow
   addWorksheet(wb, sheet_name)
 }
 writeData(wb, "Metadata", meta_sheet)
-writeData(wb, "Average price", avgprice_long)
+writeData(wb, "Average price", avgprice_long, keepNA = TRUE, na.string = "-")
 writeData(wb, "Chained index", chained_long)
 writeData(wb, "Monthly growth", monthly_long)
 writeData(wb, "Annual growth", annual_long)
