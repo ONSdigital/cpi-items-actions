@@ -19,11 +19,11 @@ jobs:
         
       - name: Install R pacakges
         run: |
-          install.packages(c("openxlsx"))
+          install.packages(c("openxlsx", "jsonlite"))
         shell: Rscript {0}
 
       - name: Import data
-        run: Rscript -e 'source("R/postprocess.R")' # Run R script
+        run: Rscript -e 'source("R/process_data.R")' # Run R script
 
       - name: Commit and push results
         run: |
