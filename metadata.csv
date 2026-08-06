@@ -503,6 +503,8 @@ ID_START,ID_NAME,CONSUMPTION_SEGMENT_CODE,CONSUMPTION_SEGMENT_NAME,Category1,Cat
 202202,Exhaust fitting,610242,Exhaust fitting,Transport,Services,Maintenance and repair of personal transport equipment,Maintenance and repairs,Operation of personal transport equipment,Transport,per service,253.95
 202602,Dashboard camera,610243,Dashboard camera,Transport,Travel equipment,Spare parts for personal transport equipment,Spare parts and accessories,Operation of personal transport equipment,Transport,each,93.57
 198702,Engine oil - multigrade,610303,Engine oil - multigrade,Transport,Spare parts,Lubricants,Fuels and lubricants,Operation of personal transport equipment,Transport,per litre,15.33
+200702,Ultra low sulphur diesel,610309,Ultra low sulphur diesel,Transport,Petrol and diesel,Diesel,Fuels and lubricants,Operation of personal transport equipment,Transport,per litre,142.47
+200702,Ultra low sulphur petrol,610310,Ultra low sulphur petrol,Transport,Petrol and diesel,Petrol,Fuels and lubricants,Operation of personal transport equipment,Transport,per litre,133.24
 198702,"Van hire - self-drive, transit type",620303,"Van hire - self-drive, transit type",Transport,Vehicle hire,"Hire of garages, parking spaces and personal transport equipment",Other services in respect of personal transport equipment,Operation of personal transport equipment,Transport,"per day, incl. VAT",80.16
 198702,Pushchair or stroller,620304,Pushchair or stroller,Transport,Travel equipment,Articles for babies,Other personal effects,Personal effects (nec),Miscellaneous goods and services,each,269.99
 199302,Car hire - self-drive,620307,Car hire - self-drive,Transport,Vehicle hire,"Hire of garages, parking spaces and personal transport equipment",Other services in respect of personal transport equipment,Operation of personal transport equipment,Transport,"per day, incl. VAT",65.29
@@ -674,8 +676,6 @@ ID_START,ID_NAME,CONSUMPTION_SEGMENT_CODE,CONSUMPTION_SEGMENT_NAME,Category1,Cat
 200202,Breakdown recovery service,610228,Breakdown recovery service,Transport,Services,Maintenance and repair of personal transport equipment,Maintenance and repairs,Operation of personal transport equipment,Transport,,
 200702,Ultra low sulphur diesel RPI,610307,Ultra low sulphur diesel RPI,Transport,Petrol and diesel,RPI only items,RPI only items,RPI only items,RPI only items,,
 200702,Ultra low sulphur petrol RPI,610308,Ultra low sulphur petrol RPI,Transport,Petrol and diesel,RPI only items,RPI only items,RPI only items,RPI only items,,
-200702,Ultra low sulphur diesel,610309,Ultra low sulphur diesel,Transport,Petrol and diesel,Diesel,Fuels and lubricants,Operation of personal transport equipment,Transport,,
-200702,Ultra low sulphur petrol,610310,Ultra low sulphur petrol,Transport,Petrol and diesel,Petrol,Fuels and lubricants,Operation of personal transport equipment,Transport,,
 198702,Vehicle tax,610409,Vehicle tax,Transport,Services,"Driving lessons, tests, licences and road worthiness tests",Other services in respect of personal transport equipment,Operation of personal transport equipment,Transport,,
 199602,Car insurance,610417,Car insurance,Transport,Services,Motor vehicle insurance,Transport insurance,Insurance,Miscellaneous goods and services,,
 198702,London rail transport fares,620101,London rail transport fares,Transport,Fares,Passenger transport by underground and tram,Passenger transport by railway,Transport services,Transport,,
